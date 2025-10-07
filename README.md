@@ -72,3 +72,7 @@ F:/NUS_AIS/DSA4213/3_assignment/
 ├── requirements.txt # Python dependencies  
 └── method.txt # methods description and run commands
 ```
+---
+Note: the outputs/ directory (training outputs and fine‑tuned model weights) is not included in this repository. To avoid inflating the repository and because Git is not suitable for storing large binary files, we do not upload model checkpoints, generated outputs, or full datasets to GitHub. Run the training script locally to create the outputs directory and save the trained models 
+
+(for example: python train.py --config configs/imdb_lora.yaml).
