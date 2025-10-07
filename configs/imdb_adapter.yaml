@@ -1,0 +1,23 @@
+# 模型和任务
+model_name: distilbert-base-uncased
+task: imdb
+method: adapter       # 指定使用 Adapter 微调
+num_labels: 2
+adapter_name: imdb_adapter   # Adapter 名称，可自定义
+adapter_reduction_factor: 16  # bottleneck 压缩比例
+
+# 数据处理
+max_length: 256
+batch_size: 16
+eval_batch_size: 32
+
+# 训练参数
+learning_rate: 2e-4
+num_train_epochs: 3
+evaluation_strategy: epoch
+logging_steps: 100
+fp16: true
+seed: 42
+
+# 输出
+output_dir: outputs/imdb_adapter

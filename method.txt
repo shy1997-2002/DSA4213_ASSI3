@@ -1,0 +1,16 @@
+# 1. 全参数微调
+python train.py --config configs/imdb_full.yaml
+python my_evaluate.py --config configs/imdb_full.yaml
+
+# 2. LoRA 微调
+python train.py --config configs/imdb_lora.yaml
+python my_evaluate.py --config configs/imdb_lora.yaml
+
+# 4. Bitfit 微调
+python train.py --config configs/imdb_BitFit.yaml
+python my_evaluate.py --config configs/imdb_BitFit.yaml
+
+#tensorboard查看结果
+tensorboard --logdir outputs/imdb_lora/runs
+tensorboard --logdir outputs/imdb_bitfit/runs
+tensorboard --logdir outputs/imdb_full/runs

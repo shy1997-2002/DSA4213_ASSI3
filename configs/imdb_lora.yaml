@@ -1,0 +1,20 @@
+model_name: distilbert-base-uncased
+task: imdb
+method: lora
+num_labels: 2
+max_length: 256
+batch_size: 16
+eval_batch_size: 32
+learning_rate: 2e-4
+num_train_epochs: 3
+output_dir: outputs/imdb_lora
+logging_steps: 100
+evaluation_strategy: epoch
+fp16: true
+seed: 42
+
+# LoRA-specific
+lora_r: 8
+lora_alpha: 16
+lora_dropout: 0.1
+target_modules: ["q_lin", "k_lin", "v_lin"]

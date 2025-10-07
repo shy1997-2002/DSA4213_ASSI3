@@ -1,0 +1,19 @@
+# 模型和任务
+model_name: distilbert-base-uncased
+task: imdb
+method: prompt                # 指定使用 Prompt-tuning
+num_labels: 2
+num_virtual_tokens: 20        # soft prompt token 数量
+num_layers: 6                 # DistilBERT 有 6 层 transformer encoder
+# 数据处理
+max_length: 256
+batch_size: 16
+eval_batch_size: 32
+# 训练参数
+learning_rate: 5e-4
+num_train_epochs: 3
+evaluation_strategy: epoch
+logging_steps: 100
+fp16: true
+seed: 42
+output_dir: outputs/imdb_prompt
