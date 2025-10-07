@@ -5,7 +5,7 @@ The goal of this project is to analyze the trade-offs between different fine-tun
 ---  
 ## Project Overview  
   
-This project was developed for the **DSA4213: Advanced Topics in AI Systems** course assignment.    
+This project was developed for the **DSA4213** course assignment.    
 It demonstrates the implementation and evaluation of several **Parameter-Efficient Fine-Tuning (PEFT)** methods using Hugging Face’s `transformers` and `peft` libraries.
 ---  
 ## Install dependencies
